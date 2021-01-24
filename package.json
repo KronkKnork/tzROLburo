@@ -1,0 +1,26 @@
+{
+  "name": "tzrolburo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "handlebars": "^4.7.6",
+    "jquery": "^3.5.1",
+    "nouislider": "^14.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KronkKnork/tzROLburo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KronkKnork/tzROLburo/issues"
+  },
+  "homepage": "https://github.com/KronkKnork/tzROLburo#readme",
+  "description": ""
+}

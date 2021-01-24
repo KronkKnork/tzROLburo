@@ -1,0 +1,290 @@
+body { font-family: "TT Norms Pro"; background-color: #f8f8f8; margin: 0; padding: 0; color: #1f1f25; }
+
+.row { margin: 0; padding: 0; }
+button:focus { outline: none; }
+#pagination { 
+    list-style: none;
+    li { 
+        display: inline-block; width: 40px; height: 40px; border-radius: 50%; color: #79818c; font-weight: bold; font-size: 16px; line-height: 20px; margin: 80px auto; 
+        background: #fff; border: 1px solid #e9f3ff; box-sizing: border-box; cursor: pointer; margin-right: 12px;
+        &:hover { 
+            background: #e9f3ff; color: #1f1f25;
+            path { fill: #1f1f25; }
+        }
+        &:active { 
+            background: #367ee7; color: #fff;
+            path { fill: #fff; }
+        }
+        span { display: block; height: 100%; text-align: center; padding: 9px 0; height: 20px; cursor: pointer; }
+        &.active { 
+            background-color: #367ee7; color: #fff; cursor: default;
+            span { cursor: default; }
+        }
+        &.disabled { 
+            border: none; background-color: #fbfcfd; cursor: default;
+            &:hover { 
+                background-color: #fbfcfd; color: #79818c;
+                path { fill: #79818c; }
+            }
+            span { cursor: default; }
+        }
+    }
+}
+.card { background: #fff; border: 1px solid #d8d8d8; padding: 30px 0; border-radius: 10px; }
+.all-content {
+    & > div:first-child { padding-left: 0; }
+    & > div:last-child { padding-right: 0; }
+}
+.card-apartment { padding-bottom: 0; }
+.card-apartment__title { 
+    font-weight: bold; font-size: 24px; line-height: 29px; color: #1f1f25; margin: 0; padding: 0 30px;
+    #count-apartment { margin: 0 7px; }
+}
+.card-apartment__table {
+    margin-top: 24px;
+    .title-table { 
+        font-weight: normal; font-size: 14px; line-height: 115%; color: #1f1f25; height: 48px;  margin: 0; padding: 0 30px;
+        &::before { content:""; position:absolute; bottom:0; left: 30px; right: 30px; height:1px; background:#e9f3ff }
+    }
+    .column-table { padding: 0; }
+    .column-table:nth-child(1) { padding-left: 0; }
+
+    .dh-before::before { display: none; }
+    .mini-apartment { 
+        height: 72px; margin: 0; padding: 0 30px; font-size: 16px; line-height: 20px; color: #1f1f25; cursor: pointer;
+        &::before { content:""; position:absolute; bottom:0; left: 30px; right: 30px; height:1px; background:#E9F3FF }
+        &:hover { box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12); width: 100%; }
+        .open-card-icon,
+        .like { display: inline-block; }
+        .like { margin-right: 20px; width: 40px; height: 40px; border-radius: 50px; background-color: rgba(241, 245, 249, 0.8); text-align: center; padding: 9px 0; }
+        .open-card-icon:hover svg path { fill:#367ee7; } //плохой способ, но пока так, если будет время причешу.
+    }
+    .column-type, 
+    .column-price { font-weight: bold; white-space: nowrap; }
+
+    .ds-box-shadow { box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12); }
+    .wrapper-apartment:last-child { border-radius: 0 0 8px 8px; }
+    .open-apartment { padding: 0 30px 30px; margin: 0; display: none; }
+    .tags { 
+        font-weight: normal; font-size: 14px; line-height: 20px; padding: 4px 10px; border-radius: 50px; margin: 50px 8px 0 0; cursor: pointer;
+        svg { margin-top: -2.5px; margin-left: 8px; }
+    }
+    .tag-discount { background-color: #ddffe2; color: #56b77f; }
+    .tag-capital { 
+        background-color: #fff7f2; color: #f2994a;
+        svg path { fill: #f2994a; }
+    }
+    .tag-mortgage { background-color: #e1e0fc; color: #9796d0; }
+    .info-apartment { 
+        margin-top: 20px; color: #1f1f25; padding-bottom: 50px;
+        .info-apartment__title { font-weight: bold; font-size: 24px; line-height: 29px; margin-top: 20px; }
+        .info-apartment__price-size { 
+            margin-top: 18px; color: #d8d8d8;
+            span { 
+                font-size: 14px; margin-right: 16px; color: #1f1f25;
+                &.size { margin-left: 16px; }
+            }
+        }
+        .info-apartment__img { padding: 0; }
+        &::before { content:""; position:absolute; bottom:0; left: 0; right: 0; height:1px; background:#d8d8d8 }
+    }
+    .additional-info-title { font-size: 14px; color: #79818c; padding: 0; margin-top: 17.5px; }
+    .additional-info-body { padding: 0; margin-top: 4px; white-space: nowrap; }
+    .description { 
+        margin-top: 15px; font-weight: bold; font-size: 16px; line-height: 20px; color: #367ee7;
+        svg { margin-left: 9px; }
+        &:hover a { text-decoration: none; color: #2e6bc7; }
+        &:hover svg path{ fill: #2e6bc7; }
+    }
+    .application-form {
+        color: #1f1f25;
+        .application-form__title { margin-top: 20px; font-size: 20px; line-height: 24px; font-weight: 500; padding: 0; }
+        .application-form__description { margin-top: 8px; font-size: 14px; line-height: 115%; padding: 0;}
+        .application-form__name .col-12,
+        .application-form__phone .col-12,
+        .application-form__btn .col-12 { padding: 0; width: 100%; }
+        .application-form__name,
+        .application-form__phone,
+        .application-form__btn { padding: 0 6px; color: #79818c; font-size: 14px; margin-top: 20px; }
+        .application-form__name { padding-left: 0; }
+        .application-form__btn { padding-right: 0; }
+        input,
+        button { width: 100%; margin-top: 8px; height: 48px; border-radius: 8px; }
+        input { 
+            border: 1px solid #d8d8d8; padding-left: 16px; font-size: 16px; line-height: 150%; background-color: transparent;
+            &:hover { border: 1px solid #79818c; transition: .5s; }
+            &:focus { 
+                outline: none; color: #1f1f25; border: 1px solid #367ee7;
+                &::placeholder { color: #D1D1D1; }
+            }
+            &:invalid:not(:placeholder-shown) {border-color: #eb5656;}
+            &:invalid:not(:placeholder-shown) + .form__error { display: block; }              
+            &:valid:not(:placeholder-shown) {border-color: #818181;}
+            
+        }
+        .form__error { 
+            position: absolute; width: 100%; top: 56px; left: 0; font-size: 14px; line-height: 115%; color: #eb5656; display: none; background-color: #fff; z-index: 1; padding: 2px;
+            svg { margin:0 9px 4px 0; }
+        }
+        .application-form__politics { 
+            color: #79818c; margin-top: 12px; padding: 0;
+            &:hover a { text-decoration: none; color: #2e6bc7; }
+        }
+        .application-form__btn button { font-weight: bold; font-size: 16px; line-height: 20px; color: #1f1f25; border: none; }
+    }
+}
+
+.card-filter { 
+    margin: 80px 0 30px 0; padding: 30px;
+    .card-filter__title { font-weight: bold; font-size: 34px; line-height: 41px; color: #1f1f25; }
+    .count-rooms-title { font-size: 14px; line-height: 115%; color: #79818c; padding: 0; margin-top: 32px; }
+    .count-rooms-filter { 
+        margin-top: 8px; padding: 0;
+        .count-rooms__btn { 
+            cursor: pointer; text-align: center; height: 40px; white-space: nowrap; padding: 8px 16px; border: 1px solid #d8d8d8; box-sizing: border-box; border-radius: 40px; margin-right: 8px;
+            &:hover { border: 1px solid #1f1f25; transition: .5s;}
+        }
+        .btn-rooms { width: 40px; padding: 8px; }
+        .btn-four { background-color: #ffd400; border: 1px solid #ffd400; width: 40px; padding: 8px; }
+        .selected-room { border: 1px solid #1f1f25; }
+    }
+    .filter-price,
+    .filter-area {
+        padding: 0; margin-top: 20px;
+        .filter-price-area__title { font-size: 14px; line-height: 115%; color: #79818c; padding: 0; }
+    }
+    .card-filter__price-area {
+        .filter-input-base { width: 100%; height: 48px; border: 1px solid #d8d8d8;box-sizing: border-box; border-radius: 8px; margin-top: 8px; text-align: right; padding-right: 12px; }
+        .filter-price__range,
+        .filter-area__range {
+            padding: 0; 
+            &:hover {
+                .filter-input-mini { color: #1f1f25; transition: .5s; }
+                .filter-input-base { border: 1px solid #79818C; transition: .5s;  }
+            }
+            &::before { content: "От"; z-index: 10; display: block; position: absolute; top: 22px; left: 16px; font-size: 16px; line-height: 150%; color: #79818c; }
+            &::after { content: "до"; z-index: 10; display: block; position: absolute; top: 22px; left: 53%; font-size: 16px; line-height: 150%; color: #79818c; }
+        }
+        .filter-price { padding-right: 15px; }
+        .filter-area { padding-left: 15px; }
+        .filter-input-mini { 
+            border: none; background-color: transparent; padding: 0 36px 0 45px; font-size: 16px; line-height: 150%; color: #79819c;
+            &:focus { 
+                & ~ .filter-input-base { border: 1px solid #367ee7; transition: .5s;  }
+                & + .filter-input-mini { color: #1f1f25; }
+            }
+        }
+        .filter-input-mini-1 { position: absolute; width: 50%; top: 9px; left: 0; height: 48px; padding-right: 10px; }
+        .filter-input-mini-2 { position: absolute; width: 50%; top: 9px; left: 50%; height: 48px; padding-left: 32px; padding-right: 30px; }
+        .filter-input-line { position: absolute; left: 50%; top: 20px; background-color: #d8d8d8; width: 1px; height: 24px; }
+        .card-filter__range { 
+            margin-top: -1px; cursor: pointer;
+            .noUi-horizontal { height: 2px; margin: 0 25px; background-color: rgba(0, 0, 0, 0); border: none; box-shadow: none; }
+            .noUi-connects { height: 2px; }
+            .noUi-connect { background-color: #367ee7; }
+            .noUi-horizontal .noUi-handle { 
+                outline: none; border: 1px solid #367ee7; width: 16px; height: 16px; border-radius: 18px; box-shadow: none; top: -7px; right: -10px;
+                &:hover { box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12); }
+                &:hover::before { transform: scale(2); transition: .3s; }
+            }
+            .noUi-handle::before,
+            .noUi-handle::after { display: none; }
+            .noUi-handle::before { display: block; background-color: #367ee7; width: 4px; height: 4px; left: 5px; top: 5px; border-radius: 18px; }
+        }
+    }
+    .card-filter__buttons { 
+        div { padding: 0; }
+        .buttons { 
+            cursor: pointer; height: 40px; border-radius: 8px; margin-top: 39px; padding: 10px 57px; width: inherit; width: auto; font-weight: bold; font-size: 16px; line-height: 20px;
+            &.disabled { cursor: default; }
+        }
+    }
+}
+.card-not-found {
+    padding: 0; display: none;
+    .card-not-found-svg {
+        display: inline-block; padding: 0; 
+        svg { margin: 61px; }
+    }
+    .card-not-found-svg__button { 
+        position: absolute; top: 63px; left: 183px; padding: 13px 12px; width: 52px; height: 52px; cursor: pointer; 
+        box-shadow: -7.38996px 16px 24px rgba(0, 0, 0, 0.12); border-radius: 40px;
+        svg { margin: 0; }
+    }
+    .card-not-found-text { 
+        display: inline-block; color: #1F1F25;
+        .card-not-found-text__title { font-weight: bold; margin-top: 91px; font-size: 24px; line-height: 29px; }
+        .card-not-found-text__description { margin-top: 12px; }
+    }
+}
+.card-mini-statistics {
+    margin-top: 80px; padding: 30px;
+    .card-mini-statistics__title { font-weight: bold; font-size: 20px; line-height: 24px; }
+    .card-mini-statistics__feedback { 
+        margin-top: 15px;
+        .feedback-repost { 
+            cursor: pointer;
+            &:hover path { fill: #367ee7; }
+        }
+        .feedback-like { margin-left: 14px; }
+        .feedback-stars { margin-left: 17px; }
+        .feedback-open { 
+            margin-left: 5px;
+        }
+    }
+    .card-mini-statistics__price { font-weight: 500; font-size: 20px; line-height: 24px; margin-top: 15px; }
+    .card-mini-statistics__priceM2 { font-size: 14px; line-height: 115%; color: #79818C; margin-top: 4px; }
+    hr { margin-top: 12px; margin-bottom: 0; background-color: #d8d8d8; }
+    a { 
+        color: #367ee7; font-size: 14px;
+        &:hover { text-decoration: none; color: #2e6bc7; }
+    }
+    .card-mini-statistics__mortgage { margin-top: 12px; }
+}
+.like { 
+    cursor: pointer;
+    &:hover { background-color: #fff; }
+    &:hover svg path { fill: #367ee7; }
+}
+.card-apartment__table .mini-apartment .like-fill { background-color: #82b0ff83; }
+.like-fill {
+    path { fill: #367ee7; }
+}
+.card-manager {
+    margin-top: 30px; padding: 30px;
+    .profile-name,
+    .profile-img-name { display: inline-block; }
+    .profile-name { 
+        margin-left: 12px;
+        .name { font-weight: bold; font-size: 16px; line-height: 20px; }
+        .profession { font-size: 14px; line-height: 115%; color: #79818C; margin-top: 4px; }
+    }
+    hr { margin-top: 16px; margin-bottom: 0; background-color: #d8d8d8; }
+    .profile-phone { margin-top: 16px; }
+    .profile-email { margin-top: 4px; }
+    .btn { font-weight: bold; font-size: 16px; line-height: 20px; height: 48px; border-radius: 8px; padding: 14px; }
+    .btn-buy-show { margin-top: 24px; }
+    .btn-buy-call { margin-top: 12px; }
+}
+.btn-yelow { 
+    background: #ffd400;
+    &:hover { background: #fde571; transition: .5s; }
+    &:active { background: #ffee99; }
+    &.disabled { 
+        opacity: 0.3; cursor: default;
+        &:hover { background: #ffd400; }
+        &:active { background: #ffd400; }
+    }
+}
+.btn-gray {
+    background: #f1f5f9;
+    &:hover { background: #d8d8d8; transition: .5s; }
+    &:active { background: #e9f3ff; }
+    &.disabled { 
+        opacity: 0.3; cursor: default;
+        &:hover { background: #f1f5f9; }
+        &:active { background: #f1f5f9; }
+    }
+}
+.card-filter .card-filter__price-area .filter-input-mini:focus { color: #1f1f25; }
+input { outline: none; }
