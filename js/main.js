@@ -81,8 +81,6 @@ $(document).ready(function () {
         $('.application-form input').on('input click', function() {
             let input1 = $(this),
                 input2 = $(this).closest('.application-form__input').siblings('.application-form__input').find('input');
-            console.log(input1.val());
-            console.log(input2.val());
             if (input1.is(':valid') && input2.is(':valid') && input2.val() !== '') {
                 $(this).closest('.application-form').find('.btn-yelow').removeClass('disabled');
             } else {
