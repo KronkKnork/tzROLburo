@@ -21,7 +21,7 @@
 
 Использованные инструменты: JQuery, Bootstrap, noUiSlider, handlebars.
 Задание достаточно интересное. На работу ушло 35 часов. Все свои ошибки знаю и знаю как улучшить данную работу.
-![Статистика](https://github.com/KronkKnork/tzROLburo/raw/master/img/statistics.png)
+>![Статистика](https://github.com/KronkKnork/tzROLburo/raw/master/img/statistics.png)
 
 ## Запуск проекта
 
