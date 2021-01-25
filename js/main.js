@@ -185,12 +185,12 @@ $(document).ready(function () {
         price.areaMin = 999999999;
         price.areaMax = 0;
         for (let noteOne of arrApartment) {
-            (price.priceMin > noteOne.price) && (price.priceMin = noteOne.price-1);
-            (price.priceMax < noteOne.price) && (price.priceMax = noteOne.price+1);
-            (price.priceM2Min > noteOne.priceM2) && (price.priceM2Min = noteOne.priceM2-1);
-            (price.priceM2Max < noteOne.priceM2) && (price.priceM2Max = noteOne.priceM2+1);
-            (price.areaMin > noteOne.totalArea) && (price.areaMin = noteOne.totalArea-1);
-            (price.areaMax < noteOne.totalArea) && (price.areaMax = noteOne.totalArea+1);
+            (price.priceMin >= noteOne.price) && (price.priceMin = noteOne.price);
+            (price.priceMax <= noteOne.price) && (price.priceMax = noteOne.price);
+            (price.priceM2Min >= noteOne.priceM2) && (price.priceM2Min = noteOne.priceM2);
+            (price.priceM2Max <= noteOne.priceM2) && (price.priceM2Max = noteOne.priceM2);
+            (price.areaMin >= noteOne.totalArea) && (price.areaMin = noteOne.totalArea);
+            (price.areaMax <= noteOne.totalArea) && (price.areaMax = noteOne.totalArea);
         }
         let priceReturn = Object.assign({}, price);
         if (price.priceMax == 0) {
@@ -216,12 +216,12 @@ $(document).ready(function () {
             arrIndex = 0;
         for (let noteOne of arrApartment) {
             if (fRooms == undefined) {
-                if (noteOne.price > Number(fPriceMin) && noteOne.price < Number(fPriceMax) && noteOne.totalArea > Number(fAreaMin) && noteOne.totalArea < Number(fAreaMax)) {
+                if (noteOne.price >= Number(fPriceMin) && noteOne.price <= Number(fPriceMax) && noteOne.totalArea >= Number(fAreaMin) && noteOne.totalArea <= Number(fAreaMax)) {
                     arrApartmentFilter[arrIndex] =  noteOne;
                     arrIndex++;
                 }
             } else {
-                if (noteOne.filterRooms == fRooms && noteOne.price > Number(fPriceMin) && noteOne.price < Number(fPriceMax) && noteOne.totalArea > Number(fAreaMin) && noteOne.totalArea < Number(fAreaMax)) {
+                if (noteOne.filterRooms == fRooms && noteOne.price >= Number(fPriceMin) && noteOne.price <= Number(fPriceMax) && noteOne.totalArea >= Number(fAreaMin) && noteOne.totalArea <= Number(fAreaMax)) {
                     arrApartmentFilter[arrIndex] =  noteOne;
                     arrIndex++;
                 }
