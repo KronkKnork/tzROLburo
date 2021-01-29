@@ -195,6 +195,9 @@ button:focus {
   margin: 0;
   display: none;
 }
+.card-apartment__table .ds {
+  display: block;
+}
 .card-apartment__table .tags {
   font-weight: normal;
   font-size: 14px;

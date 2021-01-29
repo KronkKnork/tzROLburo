@@ -5,7 +5,6 @@
   "dependencies": {
     "bootstrap": "^4.5.3",
     "handlebars": "^4.7.6",
-    "jquery": "^3.5.1",
     "nouislider": "^14.6.3"
   },
   "devDependencies": {},
@@ -22,5 +21,5 @@
     "url": "https://github.com/KronkKnork/tzROLburo/issues"
   },
   "homepage": "https://github.com/KronkKnork/tzROLburo#readme",
-  "description": ""
+  "description": "Краткая задача: Задание представляет из себя небольшое приложение, предоставляющее из себя сервис покупки квартир."
 }
